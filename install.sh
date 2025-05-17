@@ -139,8 +139,9 @@ install_main() {
 
   MAIN_PATH="${INSTALL_DIR}/${MAIN_NAME}"
   if curl -s -L -o "$MAIN_PATH" "$MAIN_URL"; then
+    chmod +x "$MAIN_PATH"
     log_success "main.sh instalado em: $MAIN_PATH"
-    log_success "Para executar o menu, execute: $MAIN_NAME"
+    log_success "Para executar o menu, execute: $RED$MAIN_NAME"
     return
   fi
 
