@@ -29,7 +29,7 @@ readonly PROXY_EXECUTABLE="/usr/local/bin/proxy"
 readonly LOG_PATH="/var/log"
 readonly SYSTEMD_SERVICE_PATH="/etc/systemd/system"
 readonly DEFAULT_BUFFER_SIZE=32768
-readonly DEFAULT_HTTP_RESPONSE="@DuTra01"
+readonly DEFAULT_HTTP_RESPONSE="DTunnel"
 readonly MIN_PORT=1
 readonly MAX_PORT=65535
 

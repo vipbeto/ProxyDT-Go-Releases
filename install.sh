@@ -104,7 +104,7 @@ show_versions_and_select() {
 }
 
 download_and_install() {
-  FILENAME="${BINARY_NAME}-${OS_NAME}-${ARCH_NAME}.tar.gz"
+  FILENAME="${BINARY_NAME}-${OS_NAME}-${ARCH_NAME}"
   DOWNLOAD_URL="https://github.com/${REPO}/releases/download/${VERSION}/${FILENAME}"
   SHA_URL="${DOWNLOAD_URL}.sha256"
 
@@ -123,9 +123,6 @@ download_and_install() {
   else
     log_warn "Arquivo SHA256 não encontrado. Pulando verificação..."
   fi
-
-  log_info "Extraindo binário..."
-  tar -xzf "$FILENAME"
 
   log_info "Instalando binário em $INSTALL_DIR..."
   sudo mv "${BINARY_NAME}-${OS_NAME}-${ARCH_NAME}" "${INSTALL_DIR}/${BINARY_NAME}"
